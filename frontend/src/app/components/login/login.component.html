@@ -1,0 +1,15 @@
+<div class="sign-in-container">
+    <form (ngSubmit)="onSignin()"  class="sing-in-form">
+        <div class="input-field-container">
+            <label for = "email">Email : </label>
+            <input type="email" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "loginUser.email"  id = "email" />
+        </div>
+        <div class="input-field-container">
+            <label for = "password">Password : </label>
+            <input type="password" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "loginUser.password"  id = "password" />
+        </div>
+        <button type="submit" class="submit-btn">Signin</button>
+        <p>Dont you have an account? <span [routerLink] ="'/signup'" >Sign up here</span></p>
+    </form>
+</div>
+

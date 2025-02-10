@@ -1,0 +1,23 @@
+<div class="sign-up-container">
+    <form (ngSubmit)="onSingup()"  class="sing-up-form">
+        <div class="input-field-container">
+            <label for = "first_name">First Name : </label>
+            <input type="text" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.firstName" id = "first_name" />
+        </div>
+        <div class="input-field-container">
+            <label for = "last_name">Last Name : </label>
+            <input type="text" class="input-field"  [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.lastName" id = "last_name" />
+        </div>
+        <div class="input-field-container">
+            <label for = "email">Email : </label>
+            <input type="email" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.email"  id = "email" />
+        </div>
+        <div class="input-field-container">
+            <label for = "password">Password : </label>
+            <input type="password" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.password"  id = "password" />
+        </div>
+        <button type="submit" class="submit-btn">Signup</button>
+        <p>Already have an account? <span [routerLink] = "'/login'">Signin here</span></p>
+    </form>
+</div>
+

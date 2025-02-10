@@ -1,0 +1,102 @@
+/* General Styling for the Sign-In Form */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the sign-in page */
+  .sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fc;
+    height: 90vh;
+  }
+  
+  /* Form Styling */
+  .sing-in-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .input-field-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field:focus {
+    border-color: #007bff;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  span {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  span:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sign-in-container {
+      padding: 20px;
+    }
+  
+    .sing-in-form {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    label,
+    .input-field,
+    .submit-btn {
+      font-size: 1rem;
+    }
+  }
+  
