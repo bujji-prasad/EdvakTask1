@@ -1,0 +1,101 @@
+
+/* Reset default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensures no margin or padding on the body and html */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* General Header Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    height: 10vh;
+  }
+  
+  .header-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .logo{
+    height: 30px;
+    width: 30px;
+  }
+
+
+
+
+
+  /* Modal Styles */
+.modal {
+  position: absolute; 
+  top: 10px; 
+  right: 10px;
+  width: 250px; 
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+  
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  }
+  
+  /* Tablet Responsiveness */
+  @media (max-width: 1024px) {
+    .header-container {
+      padding: 10px 15px;
+    }
+  
+  }
+  

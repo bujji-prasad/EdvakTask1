@@ -21,4 +21,12 @@ export const routes: Routes = [{
         return import("../app/components/login/login.component")
         .then(m => m.LoginComponent)
     }
-}];
+},
+{
+    path : "home",
+    loadComponent : () => {
+        return import("../app/components/home/home.component")
+        .then(m => m.HomeComponent)
+    }
+},
+];
