@@ -1,12 +1,12 @@
 <div class="sign-up-container">
-    <form (ngSubmit)="onSingup()"  class="sing-up-form">
+    <form (ngSubmit)="onSignup()"  class="sing-up-form">
         <div class="input-field-container">
             <label for = "first_name">First Name : </label>
-            <input type="text" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.firstName" id = "first_name" />
+            <input type="text" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.first_name" id = "first_name" />
         </div>
         <div class="input-field-container">
             <label for = "last_name">Last Name : </label>
-            <input type="text" class="input-field"  [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.lastName" id = "last_name" />
+            <input type="text" class="input-field"  [ngModelOptions]="{standalone: true}" [(ngModel)] = "user.last_name" id = "last_name" />
         </div>
         <div class="input-field-container">
             <label for = "email">Email : </label>
