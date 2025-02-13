@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken")
 
 const createUser = async (req, res) => {
     const { first_name, last_name, email, password } = req.body;
+    email = email.toLowerCase();
     try {
         const existingUser = await User.findOne({ email });
         if (existingUser) {
@@ -19,8 +20,8 @@ const createUser = async (req, res) => {
                 createdDate: new Date().toISOString(),
                 updatedDate: new Date().toISOString(),
             });
-            await newUser.save();
-            res.status(200).json({ message: "User added successfully", user: newUser });
+            await newUser.save();r
+            res.status(200).json({ success : true ,  data : newUser , error : null});
         }
     } catch (error) {
         console.log("Error while creating the user:", error);
@@ -30,13 +31,11 @@ const createUser = async (req, res) => {
         });
     }
 };
-
-
 const loginUser = async (req,res) => {
     const {email,password} = req.body 
     console.log(email,password)
     try{
-        const userExist = await User.findOne({email})
+        const userExist = await User.findOne({email : email.toLowerCase()})
         if(!userExist){
             res.status(400).json({message : "Invalid email"})
         }
@@ -99,6 +98,10 @@ const getUserDetails = async (req, res) => {
       return res.status(500).json({ message: 'Error retrieving user details', details: err.message });
     }
   };
+
+
+
+
   
 
 

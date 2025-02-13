@@ -5,7 +5,7 @@ import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-homeheader',
-  imports: [CommonModule],
+  imports: [CommonModule ],
   templateUrl: './homeheader.component.html',
   styleUrl: './homeheader.component.scss'
 })
@@ -15,6 +15,7 @@ export class HomeheaderComponent implements OnInit{
   lastName: string = '';
   email: string = '';
   isModalOpen: boolean = false;
+  
 
   constructor(private router: Router, private apiService: ApiService) {}
 
@@ -24,10 +25,12 @@ export class HomeheaderComponent implements OnInit{
 
   openModel(): void {
     this.isModalOpen = true;
+    console.log("model opened")
   }
 
   closeModal(): void {
     this.isModalOpen = false;
+    console.log("model closed")
   }
 
   logout() {
@@ -39,7 +42,7 @@ export class HomeheaderComponent implements OnInit{
       (response) => {
         console.log(`user detaisl from resposne : ${response.first_name}`)
         this.firstName = response.first_name;
-        this.lastName = response.last_name
+        this.lastName = response.last_name;
         this.email = response.email;
         console.log(this.firstName,this.lastName,this.email)
       },
@@ -48,4 +51,8 @@ export class HomeheaderComponent implements OnInit{
       }
     );
   }
+
+
+  
+
 }

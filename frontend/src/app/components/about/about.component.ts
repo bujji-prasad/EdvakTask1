@@ -10,5 +10,13 @@ import {  RouterOutlet } from '@angular/router';
   standalone : true
 })
 export class AboutComponent {
-
-}
+    navigateTo(page: string) {
+      if (page === 'signup') {
+        console.log('Navigating to signup...');
+        window.location.href = '/signup'; 
+      } else if (page === 'login') {
+        console.log('Navigating to login...');
+        window.location.href = '/login'; 
+      }
+    }
+  }

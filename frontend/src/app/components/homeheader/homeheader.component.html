@@ -1,19 +1,33 @@
-<div class="header-container">
-    <img src="Edvak EHR-Vertical.png" alt="logo" class="logo">
-    <i (click) = "openModel()" class="fa-solid fa-user"></i>
-</div>
 
-
-<!-- Modal (Popup) -->
-<div class="modal" *ngIf="isModalOpen">
-    <div class="modal-content">
-        <span class="close" (click)="closeModal()">&times;</span>
-        <h2>User Details</h2>
-        <p><strong>First Name:</strong>{{firstName}}</p>
-        <p><strong>Last Name:</strong>{{lastName}}</p>
-        <p><strong>Email:</strong>{{email}}</p>
-        <button (click) = "logout()" type="button">Logout</button>
+<div class="home-page">
+    <!-- Header Section -->
+    <div class="header-container">
+        <img src="Edvak EHR-Vertical.png" alt="logo" class="logo">
+        <i (click) = "openModel()" class="fa-solid fa-user"></i>
     </div>
+
+
+     <!-- User Details Modal (Top-right corner) -->
+     <div class="modal1" *ngIf="isModalOpen" [ngClass]="{'active': isModalOpen}">
+        <div class="modal-content1">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <h2>User Details</h2>
+            <p><strong>First Name:</strong>{{firstName}}</p>
+            <p><strong>Last Name:</strong>{{lastName}}</p>
+            <p><strong>Email:</strong>{{email}}</p>
+            <button (click)="logout()" type="button">Logout</button>
+        </div>
+    </div>
+      
+
 </div>
+
+
+
+
+
+
+
+
 
 
