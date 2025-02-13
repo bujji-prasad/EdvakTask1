@@ -21,4 +21,57 @@ export const routes: Routes = [{
         return import("../app/components/login/login.component")
         .then(m => m.LoginComponent)
     }
-}];
+},
+{
+    path : "home",
+    loadComponent : () => {
+        return import("../app/components/home/home.component")
+        .then(m => m.HomeComponent)
+    }
+},
+{
+    path : "addTask",
+    loadComponent : () => {
+        return import("../app/components/task/task.component")
+        .then(m => m.TaskComponent)
+    }
+},
+{
+    path : "tasks",
+    loadComponent : () => {
+        return import("../app/components/task/task.component")
+        .then(m => m.TaskComponent)
+    }
+},
+{
+    path : "",
+    loadComponent : () => {
+        return import("../app/components/task/task.component")
+        .then(m => m.TaskComponent)
+    }
+},
+{
+    path : "deleteTask/:taskId",
+    loadComponent : () => {
+        return import("../app/components/task/task.component")
+        .then(m => m.TaskComponent)
+    }
+},
+
+{
+    path : "taskEdit/:taskId",
+    loadComponent : () => {
+        return import("../app/components/task/task.component")
+        .then(m => m.TaskComponent)
+    }
+},
+
+{
+    path : "task/:taskId",
+    loadComponent : () => {
+        return import("../app/components/task/task.component")
+        .then(m => m.TaskComponent)
+    }
+},
+
+];

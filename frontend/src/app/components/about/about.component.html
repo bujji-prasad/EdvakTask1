@@ -1,2 +1,28 @@
 <app-header></app-header>
 
+<!-- Main Content Container -->
+<div class="main-page-container">
+  <div class="intro-section">
+    <h1>Welcome to Task Manager</h1>
+    <p>Efficiently manage and track your tasks with our easy-to-use platform. Stay organized, stay productive!</p>
+
+    <div class="features">
+      <h2>Key Features:</h2>
+      <ul>
+        <li><strong>Task Management:</strong> Create, update, and organize tasks with ease.</li>
+        <li><strong>Prioritize Tasks:</strong> Set task priorities (Low, Medium, High) to stay on top of what matters.</li>
+        <li><strong>Track Progress:</strong> Monitor the progress of your tasks (Pending, In-progress, Completed).</li>
+        <li><strong>Deadline Management:</strong> Set due dates for tasks and never miss a deadline again.</li>
+        <li><strong>Team Collaboration:</strong> Assign tasks to your teammates and track their progress.</li>
+        <li><strong>Pagination & Filtering:</strong> View and filter tasks in a manageable, organized way.</li>
+      </ul>
+    </div>
+
+    <div class="cta-section">
+      <h3>Ready to get started?</h3>
+      <p>Sign up now and take control of your tasks. Or log in if you already have an account!</p>
+      <button (click)="navigateTo('signup')" class="cta-button">Sign Up</button>
+      <button (click)="navigateTo('login')" class="cta-button">Log In</button>
+    </div>
+  </div>
+</div>

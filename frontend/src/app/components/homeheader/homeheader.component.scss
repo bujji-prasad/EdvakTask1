@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Styles */
+.home-page {
+  font-family: Arial, sans-serif;
+  padding-top: 70px; /* Adjust for fixed header */
+  background-color: #f4f7fa;
+}
+
+/* Header Section */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 60px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.header-container .fa-user {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.header-container .fa-user:hover {
+  color: #ccc;
+}
+/* Modal1 (User Details Modal - Top-right corner) */
+.modal1 {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 280px; /* Slightly reduced width */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 101;
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-sizing: border-box; /* Ensures padding is included within the width */
+}
+
+/* Modal active state */
+.modal1.active {
+  display: block; /* Visible when 'active' class is added */
+  opacity: 1;
+  transform: translateY(0); /* Smooth transition */
+}
+
+/* Close button */
+.modal1 .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.6rem; /* Reduced the size for a more subtle look */
+  color: #888; /* Softer color */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.modal1 .close:hover {
+  color: #333; /* Darker color on hover */
+}
+
+/* Heading inside the modal */
+.modal1 h2 {
+  font-size: 1.4rem; /* Slightly smaller for consistency */
+  margin-bottom: 10px; /* Reduced bottom margin */
+  color: #333; /* Dark text for better readability */
+}
+
+/* Styling for text inside the modal */
+.modal1 p {
+  font-size: 1rem;
+  color: #555; /* Softer color for text */
+  margin-bottom: 12px; /* Increased margin for better spacing between elements */
+}
+
+/* Button inside the modal */
+.modal1 button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Added spacing between the text and button */
+}
+
+.modal1 button:hover {
+  background-color: #0056b3; /* Slightly darker on hover */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .filters-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .filters select {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .task-list table th, 
+  .task-list table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .task-list {
+    margin: 10px;
+  }
+
+  .add-task button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  .modal-content form {
+    width: 100%;
+  }
+
+  .modal-content label {
+    font-size: 0.9rem;
+  }
+
+  .modal-content input,
+  .modal-content select,
+  .modal-content textarea {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .filters-section {
+    width: 100%;
+  }
+
+  .pagination button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .pagination span {
+    font-size: 0.8rem;
+  }
+
+  .task-list table {
+    font-size: 0.9rem;
+  }
+}

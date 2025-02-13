@@ -1,0 +1,155 @@
+/* Main Page Layout */
+.main-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 20px 20px;
+    height: calc(100vh - 80px);
+    background-color: #f7fafc;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .intro-section {
+    text-align: center;
+    max-width: 700px; 
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    
+    &:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
+    }
+  }
+  .intro-section h1 {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .intro-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .features {
+    margin-top: 40px;
+  }
+  
+  .features h2 {
+    font-size: 26px;
+    color: #007BFF;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .features ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: #444;
+  }
+  
+  .features ul li::before {
+    content: "✔";
+    color: #007BFF;
+    font-size: 22px;
+    margin-right: 12px;
+  }
+  
+  .cta-section {
+    margin-top: 50px;
+  }
+  
+  .cta-section h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  .cta-button {
+    padding: 16px 32px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #218838;
+    transform: scale(1.05); 
+  }
+  
+  .cta-button:focus {
+    outline: none;
+  }
+  
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 30px;
+    }
+  
+    .intro-section h1 {
+      font-size: 32px;
+    }
+  
+    .features h2 {
+      font-size: 22px;
+    }
+  
+    .cta-section h3 {
+      font-size: 22px;
+    }
+  
+    .cta-button {
+      font-size: 18px;
+      padding: 14px 28px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-page-container {
+      padding: 10px;
+    }
+  
+    .intro-section {
+      padding: 20px;
+    }
+  
+    .intro-section h1 {
+      font-size: 28px;
+    }
+  
+    .features h2 {
+      font-size: 20px;
+    }
+  
+    .cta-section h3 {
+      font-size: 20px;
+    }
+  
+    .cta-button {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+  }
+  

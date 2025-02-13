@@ -18,6 +18,10 @@
         </div>
         <button type="submit" class="submit-btn">Signup</button>
         <p>Already have an account? <span [routerLink] = "'/login'">Signin here</span></p>
+         <!-- Error Messages -->
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
     </form>
+    
 </div>
 

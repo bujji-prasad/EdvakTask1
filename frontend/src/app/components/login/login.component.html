@@ -9,6 +9,7 @@
             <input type="password" class="input-field" [ngModelOptions]="{standalone: true}" [(ngModel)] = "loginUser.password"  id = "password" />
         </div>
         <button type="submit" class="submit-btn">Signin</button>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
         <p>Dont you have an account? <span [routerLink] ="'/signup'" >Sign up here</span></p>
     </form>
 </div>
